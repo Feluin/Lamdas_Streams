@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Query.java</title>
+<title>las.sql.Query.java</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 .s0 { color: #000080; font-weight: bold;}
@@ -15,14 +15,14 @@
 <table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
 <tr><td><center>
 <font face="Arial, Helvetica" color="#000000">
-Query.java</font>
+    las.sql.Query.java</font>
 </center></td></tr></table>
 <pre><a name="l1"><span class="ln">1    </span></a><span class="s0">import </span>java.io.BufferedWriter;
 <a name="l2"><span class="ln">2    </span></a><span class="s0">import </span>java.io.FileWriter;
 <a name="l3"><span class="ln">3    </span></a><span class="s0">import </span>java.io.IOException;
 <a name="l4"><span class="ln">4    </span></a><span class="s0">import </span>java.sql.*;
 <a name="l5"><span class="ln">5    </span></a>
-<a name="l6"><span class="ln">6    </span></a><span class="s0">public class </span>Query <span class="s0">implements </span>lamdas_and_streams.IQuery {
+<a name="l6"><span class="ln">6    </span></a><span class="s0">public class </span>las.sql.Query <span class="s0">implements </span>las.sql.IQuery {
 <a name="l7"><span class="ln">7    </span></a>    <span class="s0">private </span>Connection connection;
 <a name="l8"><span class="ln">8    </span></a>    <span class="s0">private </span>String driverName = <span class="s2">&quot;jdbc:hsqldb:&quot;</span>;
 <a name="l9"><span class="ln">9    </span></a>    <span class="s0">private </span>String username = <span class="s2">&quot;sa&quot;</span>;
@@ -30,7 +30,7 @@ Query.java</font>
 <a name="l11"><span class="ln">11   </span></a>    <span class="s0">private </span>BufferedWriter bufferedWriter;
 <a name="l12"><span class="ln">12   </span></a>
 <a name="l13"><span class="ln">13   </span></a>    <span class="s0">public static void </span>main(String... args) {
-<a name="l14"><span class="ln">14   </span></a>        Query query = <span class="s0">new </span>Query();
+<a name="l14"><span class="ln">14   </span></a>        las.sql.Query query = <span class="s0">new </span>las.sql.Query();
 <a name="l15"><span class="ln">15   </span></a>        query.startup();
 <a name="l16"><span class="ln">16   </span></a>
 <a name="l17"><span class="ln">17   </span></a>        query.executeSQL01();
@@ -54,10 +54,10 @@ Query.java</font>
 <a name="l35"><span class="ln">35   </span></a>    <span class="s0">public void </span>startup() {
 <a name="l36"><span class="ln">36   </span></a>        <span class="s0">try </span>{
 <a name="l37"><span class="ln">37   </span></a>            Class.forName(<span class="s2">&quot;org.hsqldb.jdbcDriver&quot;</span>);
-<a name="l38"><span class="ln">38   </span></a>            String databaseURL = driverName + Configuration.instance.dataPath + <span class="s2">&quot;records.db&quot;</span>;
+<a name="l38"><span class="ln">38   </span></a>            String databaseURL = driverName + las.Configuration.instance.dataPath + <span class="s2">&quot;records.db&quot;</span>;
 <a name="l39"><span class="ln">39   </span></a>            connection = DriverManager.getConnection(databaseURL, username, password);
 <a name="l40"><span class="ln">40   </span></a>
-<a name="l41"><span class="ln">41   </span></a>            bufferedWriter = <span class="s0">new </span>BufferedWriter(<span class="s0">new </span>FileWriter(Configuration.instance.logPath + <span class="s2">&quot;query.log&quot;</span>));
+<a name="l41"><span class="ln">41   </span></a>            bufferedWriter = <span class="s0">new </span>BufferedWriter(<span class="s0">new </span>FileWriter(las.Configuration.instance.logPath + <span class="s2">&quot;query.log&quot;</span>));
 <a name="l42"><span class="ln">42   </span></a>        } <span class="s0">catch </span>(Exception e) {
 <a name="l43"><span class="ln">43   </span></a>            System.out.println(e.getMessage());
 <a name="l44"><span class="ln">44   </span></a>        }
