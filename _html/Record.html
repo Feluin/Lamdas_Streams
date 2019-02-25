@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Record.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #008000; font-weight: bold;}
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Record.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">public class </span>Record {
+<a name="l2"><span class="ln">2    </span></a>    <span class="s0">private int </span>id;
+<a name="l3"><span class="ln">3    </span></a>    <span class="s0">private </span>String size;
+<a name="l4"><span class="ln">4    </span></a>    <span class="s0">private int </span>weight;
+<a name="l5"><span class="ln">5    </span></a>    <span class="s0">private </span>String source;
+<a name="l6"><span class="ln">6    </span></a>    <span class="s0">private </span>String destination;
+<a name="l7"><span class="ln">7    </span></a>    <span class="s0">private boolean </span>isExpress;
+<a name="l8"><span class="ln">8    </span></a>    <span class="s0">private boolean </span>isValue;
+<a name="l9"><span class="ln">9    </span></a>    <span class="s0">private boolean </span>isFragile;
+<a name="l10"><span class="ln">10   </span></a>
+<a name="l11"><span class="ln">11   </span></a>    <span class="s0">public </span>Record(<span class="s0">int </span>id, String size, <span class="s0">int </span>weight, String source, String destination,
+<a name="l12"><span class="ln">12   </span></a>                  <span class="s0">boolean </span>isExpress, <span class="s0">boolean </span>isValue, <span class="s0">boolean </span>isFragile) {
+<a name="l13"><span class="ln">13   </span></a>        <span class="s0">this</span>.id = id;
+<a name="l14"><span class="ln">14   </span></a>        <span class="s0">this</span>.size = size;
+<a name="l15"><span class="ln">15   </span></a>        <span class="s0">this</span>.weight = weight;
+<a name="l16"><span class="ln">16   </span></a>        <span class="s0">this</span>.source = source;
+<a name="l17"><span class="ln">17   </span></a>        <span class="s0">this</span>.destination = destination;
+<a name="l18"><span class="ln">18   </span></a>        <span class="s0">this</span>.isExpress = isExpress;
+<a name="l19"><span class="ln">19   </span></a>        <span class="s0">this</span>.isValue = isValue;
+<a name="l20"><span class="ln">20   </span></a>        <span class="s0">this</span>.isFragile = isFragile;
+<a name="l21"><span class="ln">21   </span></a>    }
+<a name="l22"><span class="ln">22   </span></a>
+<a name="l23"><span class="ln">23   </span></a>    <span class="s0">public </span>String toString() {
+<a name="l24"><span class="ln">24   </span></a>        StringBuilder stringBuilder = <span class="s0">new </span>StringBuilder();
+<a name="l25"><span class="ln">25   </span></a>        stringBuilder.append(id).append(<span class="s2">&quot;;&quot;</span>).append(size).append(<span class="s2">&quot;;&quot;</span>).append(weight).append(<span class="s2">&quot;;&quot;</span>);
+<a name="l26"><span class="ln">26   </span></a>        stringBuilder.append(source).append(<span class="s2">&quot;;&quot;</span>).append(destination).append(<span class="s2">&quot;;&quot;</span>);
+<a name="l27"><span class="ln">27   </span></a>        stringBuilder.append(isExpress).append(<span class="s2">&quot;;&quot;</span>).append(isValue).append(<span class="s2">&quot;;&quot;</span>).append(isFragile);
+<a name="l28"><span class="ln">28   </span></a>        <span class="s0">return </span>stringBuilder.toString();
+<a name="l29"><span class="ln">29   </span></a>    }
+<a name="l30"><span class="ln">30   </span></a>}</pre>
+</body>
+</html>
