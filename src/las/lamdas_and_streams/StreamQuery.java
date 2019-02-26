@@ -17,7 +17,7 @@ public class StreamQuery implements ILaSQuery {
 
     public static void main(String... args) {
         StreamQuery query = new StreamQuery();
-        query.startup();
+        query.startup("./data/records.csv");
 
         Long execute01 = query.execute01();
         query.writeLogfile("Result of 1:" + execute01);
@@ -59,8 +59,8 @@ public class StreamQuery implements ILaSQuery {
         query.shutdown();
     }
 
-    public void startup() {
-        Dataimport dataimport = new Dataimport("./data/records.csv");
+    public void startup(String file) {
+        Dataimport dataimport = new Dataimport(file);
         try {
             logFileWriter = new BufferedWriter(new FileWriter(Configuration.instance.logPath + "lasquery.log"));
 

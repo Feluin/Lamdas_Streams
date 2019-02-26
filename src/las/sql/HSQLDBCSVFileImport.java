@@ -19,7 +19,7 @@ public class HSQLDBCSVFileImport {
     public static void main(String... args) {
         las.sql.HSQLDBCSVFileImport hsqldbcsvFileImport = new las.sql.HSQLDBCSVFileImport();
         hsqldbcsvFileImport.init();
-        hsqldbcsvFileImport.importCSVFile(las.Configuration.instance.dataPath + "records.csv");
+        hsqldbcsvFileImport.importCSVFile(las.Configuration.instance.dataPath + "TestRecords.csv");
         hsqldbcsvFileImport.shutdown();
     }
 

@@ -107,7 +107,7 @@ public class Application
     {
         try
         {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(Configuration.instance.dataPath + "records.csv")));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(Configuration.instance.dataPath + "TestRecords.csv")));
 
             for (int i = 0; i < Configuration.instance.maximumNumberOfRecords; i++)
             {
